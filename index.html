@@ -1,0 +1,50 @@
+ <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script type="text/javascript" src="script.js"></script>
+ <form class="calc">
+    <p class="calc-display">
+      <input type="text" name="output" id="output" value="" class="calc-display-input" onfocus="this.blur()">
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calcbutton calc-button-gray">mrc</button>
+      <button type="button" class="calcbutton calc-button-gray">m-</button>
+      <button type="button" class="calcbutton calc-button-gray">m+</button>
+      <button type="button" class="calcbutton calc-button-red calc-button-big">÷</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calcbutton">7</button>
+      <button type="button" class="calcbutton">8</button>
+      <button type="button" class="calcbutton">9</button>
+      <button type="button" class="calcbutton calc-button-red calc-button-big">x</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calcbutton">4</button>
+      <button type="button" class="calcbutton">5</button>
+      <button type="button" class="calcbutton">6</button>
+      <button type="button" class="calcbutton calc-button-red calc-button-big">-</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calcbutton">1</button>
+      <button type="button" class="calcbutton">2</button>
+      <button type="button" class="calcbutton">3</button>
+      <button type="button" class="calcbutton calc-button-red calc-button-big">+</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calcbutton">0</button>
+      <button type="button" class="calcbutton">.</button>
+      <button type="button" class="calcbutton">C</button>
+      <button type="button" class="calcbutton calc-button-yellow calc-button-big">=</button>
+    </p>
+  </form>
+
+<script>
+// Initialization code -- do not change this either
+function f(i,e,o){ 
+  i.addEventListener(e,o["onClick"].bind(o)); 
+}
+window.onload=function() {
+  var calcbuttons = document.getElementsByClassName("calcbutton");
+  for(var i = 0; i < calcbuttons.length; i++) {                                       
+     f(calcbuttons[i],"click", Calculator);
+  }
+}
+</script>
